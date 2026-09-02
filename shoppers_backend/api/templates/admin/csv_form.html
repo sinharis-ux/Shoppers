@@ -1,0 +1,41 @@
+{% extends "admin/base_site.html" %}
+{% load admin_urls %}
+
+{% block content %}
+<div id="content-main">
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="module aligned">
+            <h2>Import Nordstrom Products from CSV</h2>
+            <div class="form-row">
+                <p style="margin-bottom: 10px;">
+                    <strong>CSV Format:</strong> Your CSV should have the following columns in order:
+                </p>
+                <ol style="margin-left: 20px; margin-bottom: 15px;">
+                    <li>Image URL</li>
+                    <li>Product URL</li>
+                    <li>Title</li>
+                    <li>Brand</li>
+                    <li>Current Price (e.g., ₹ 10,207.34)</li>
+                    <li>Current Price Display (can be empty)</li>
+                    <li>Original Price (can be empty)</li>
+                    <li>Original Price Display (can be empty)</li>
+                    <li>Review URL (used to extract product ID)</li>
+                    <li>Rating (e.g., 4.7)</li>
+                    <li>Review Count (e.g., (10))</li>
+                    <li>Special Note (e.g., "Only a few left")</li>
+                    <li>Sponsored flag</li>
+                    <li>Extra field</li>
+                </ol>
+            </div>
+            <div class="form-row">
+                {{ form.as_p }}
+            </div>
+        </fieldset>
+        <div class="submit-row">
+            <input type="submit" value="Import CSV" class="default">
+            <a href="/admin/api/nordstromproduct/" class="button cancel-link">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

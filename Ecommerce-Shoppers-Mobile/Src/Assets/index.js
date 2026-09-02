@@ -1,0 +1,17 @@
+export const Images = {
+    img_Chevron: require('./Images/Chevron.png'),
+    img_background: require('./Images/image.png'),
+    img_search: require('./Images/Vector.png'),
+    img_Camera: require('./Images/Big.png'),
+    img_flash: require('./Images/flash.png'),
+    img_retake: require('./Images/retake.png'),
+    img_dropdown: require('./Images/dropdown.png'),
+    img_avatar: require('./Images/gg.png'),
+    img_searchbar: require('./Images/searchbar.png'),
+    img_filter: require('./Images/filter.png'),
+    img_lowerhigh: require('./Images/lower.png'),
+    img_tshirt: require('./Images/tshirt.png'),
+    img_blouse: require('./Images/photo.png'),
+    img_heart: require('./Images/Shape.png'),
+    img_website: require('./Images/website.png'),
+};
